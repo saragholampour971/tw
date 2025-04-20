@@ -1,0 +1,29 @@
+﻿@font-face {
+    font-family: dana;
+    font-style: normal;
+    font-weight: 500;
+    src: url('../font/eot/dana-medium.eot');
+    src: url('../font/eot/dana-medium.eot?#iefix') format('embedded-opentype'),
+        /* IE6-8 */ url('../font/woff2/dana-medium.woff2') format('woff2'),
+        /* FF39+,Chrome36+, Opera24+*/ url('../font/woff/dana-medium.woff') format('woff'); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+
+@font-face {
+    font-family: dana;
+    font-style: normal;
+    font-weight: bold;
+    src: url('../font/eot/dana-bold.eot');
+    src: url('../font/woff/dana-bold.woff') format('woff'),
+        /* FF39+,Chrome36+, Opera24+*/ url('../font/woff/dana-bold.woff') format('woff'); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+
+@font-face {
+    font-family: dana;
+    font-style: normal;
+    font-weight: normal;
+    src: url('../font/eot/dana-regular.eot');
+    src: url('../font/eot/dana-regular.eot?#iefix') format('embedded-opentype'),
+        /* IE6-8 */ url('../font/woff2/dana-regular.woff2') format('woff2'),
+        /* FF39+,Chrome36+, Opera24+*/ url('../font/woff/dana-regular.woff') format('woff'); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+
