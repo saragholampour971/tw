@@ -1,0 +1,9 @@
+export { default as ChevronRightSvg } from "./ChevronRightSvg";
+export { default as DarkLogo } from "./DarkLogo";
+export { default as DesLikeSvg } from "./DesLikeSvg";
+export { default as DownloadSvg } from "./DownloadSvg";
+export { default as LikeSvg } from "./LikeSvg";
+export { default as Logo } from "./Logo";
+export { default as PlaySvg } from "./PlaySvg";
+export { default as SaveSvg } from "./SaveSvg";
+export { default as UserSvg } from "./UserSvg";

@@ -24,20 +24,23 @@ const MobileNavbar = () => {
         <button
           type={'button'}
           onClick={toggleMenu}
+          onBlur={toggleMenu}
           className="text-white w-full h-full focus:outline-none">
           <UserSvg className={'w-full h-full'}/>
         </button>
 
-        <div className={`${isMenuOpen ? 'top-0 left-0 block absolute top-navbarHeight' : 'hidden'} `} id="mobile-menu">
-          <div className="px-2 pt-2 pb-3 space-y-1 bg-red-300 sm:px-3">
-            {links.map(node =>
+        <ul
+          className={`${isMenuOpen ? 'min-w-[100px] top-0 left-0 block bg-black absolute top-navbarHeight' : 'hidden'} `}
+          id="mobile-menu">
+          {links.map(node =>
+            <li>
               <Link
                 to={node.to}
-                className="block hover:bg-gray-700 px-3 py-2">{node.label}</Link>
-            )}
-          </div>
+                className="text-sm block hover:bg-gray-700 p-2 whitespace-nowrap">{node.label}</Link>
+            </li>
+          )}
 
-        </div>
+        </ul>
       </div>
 
 

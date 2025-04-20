@@ -1,6 +1,5 @@
 import React from 'react';
 import {Link} from "react-router";
-import {measureMemory} from "vm";
 import {PlaySvg} from "src/icon-pack/icons";
 
 type Props = {

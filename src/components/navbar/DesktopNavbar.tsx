@@ -6,7 +6,7 @@ import {links} from "src/components/constant";
 const DesktopNavbar = () => {
   return (
     <nav
-      className="bg-black bg-[#1C2526] h-navbarHeight text-white flex items-center sticky top-0 z-50">
+      className="bg-[#1C2526] h-navbarHeight text-white flex items-center sticky top-0 z-50">
       <Link to="/" className={'h-full'}>
         <Logo className={'h-full w-full'}/>
       </Link>
