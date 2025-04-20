@@ -13,11 +13,14 @@ const DesktopNavbar = () => {
       <div className={'px-4 hidden md:inline-flex'}>
         <ul
           className={`md:flex gap-x-6  text-sm font-medium static`}>
-          {links.map(node =>
-            <Link
-              to={node.to}
-              className={'text-sm px-2'}
-            >{node.label}</Link>)}
+          {links.map((node, index) =>
+            <li key={`desktop-link-${index}`}>
+              <Link
+                to={node.to}
+                className={'text-sm px-2'}
+              >{node.label}</Link>
+            </li>
+          )}
         </ul>
       </div>
 

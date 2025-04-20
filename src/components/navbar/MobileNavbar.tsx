@@ -32,8 +32,8 @@ const MobileNavbar = () => {
         <ul
           className={`${isMenuOpen ? 'min-w-[100px] top-0 left-0 block bg-black absolute top-navbarHeight' : 'hidden'} `}
           id="mobile-menu">
-          {links.map(node =>
-            <li>
+          {links.map((node, index) =>
+            <li key={`mobile-link-${index}`}>
               <Link
                 to={node.to}
                 className="text-sm block hover:bg-gray-700 p-2 whitespace-nowrap">{node.label}</Link>

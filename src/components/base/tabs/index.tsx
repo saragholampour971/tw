@@ -22,7 +22,7 @@ const Tabs = (props: Props) => {
         <div className="flex w-full relative ">
           {tabs.map((tab, index) => (
             <Tab
-              key={index}
+              key={`tab-title-${index}`}
               label={tab.label}
               isActive={activeTab === index}
               onClick={() => {
@@ -34,7 +34,7 @@ const Tabs = (props: Props) => {
         </div>
       </div>
       {tabs.map((tab, index) => (
-        <TabPanel key={index} isActive={activeTab === index}>
+        <TabPanel key={`tab-panel-${index}`} isActive={activeTab === index}>
           {tab.content}
         </TabPanel>
       ))}
