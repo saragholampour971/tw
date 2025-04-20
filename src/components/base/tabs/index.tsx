@@ -1,4 +1,4 @@
-import React, {ReactNode, useState} from 'react';
+import React, {ReactNode, useState, Suspense} from 'react';
 import TabPanel from "src/components/base/tabs/TabPanel";
 import Tab from "src/components/base/tabs/Tab";
 
@@ -14,6 +14,7 @@ type Props = {
 const Tabs = (props: Props) => {
   const {tabs, onchangeTab, defaultTab} = props
   const [activeTab, setActiveTab] = useState<number>(defaultTab || 0);
+  const [mountedTabs, setMountedTabs] = useState<Set<number>>(new Set([defaultTab || 0]));
 
 
   return (
@@ -27,17 +28,24 @@ const Tabs = (props: Props) => {
               isActive={activeTab === index}
               onClick={() => {
                 setActiveTab(index)
+                setMountedTabs(prev => new Set(prev).add(index));
                 onchangeTab?.(index)
               }}
             />
           ))}
         </div>
       </div>
-      {tabs.map((tab, index) => (
-        <TabPanel key={`tab-panel-${index}`} isActive={activeTab === index}>
-          {tab.content}
-        </TabPanel>
-      ))}
+      {tabs.map((tab, index) => {
+        if (!mountedTabs.has(index)) return null;
+
+        return (
+          <Suspense fallback={<div key={`loading-${index}`}>Loading...</div>} key={`tab-panel-${index}`}>
+            <TabPanel isActive={activeTab === index}>
+              {tab.content}
+            </TabPanel>
+          </Suspense>
+        );
+      })}
     </div>
   );
 };

@@ -1,4 +1,8 @@
-import EpisodesList from "src/components/series-detail/components/EpisodesList";
+import React from "react";
+
+const EpisodesList = React.lazy(
+  () => import("src/components/series-detail/components/EpisodesList"));
+
 
 export const descriptionInfo = [
   {label: '78%'},

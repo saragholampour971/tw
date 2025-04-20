@@ -5,8 +5,10 @@ import SeriesDetail from "src/components/series-detail";
 function App() {
   return (
     <div className="App">
-      <Navbar/>
-      <SeriesDetail/>
+      <React.Suspense fallback={<p>loading...</p>}>
+        <Navbar/>
+        <SeriesDetail/>
+      </React.Suspense>
 
     </div>
   );

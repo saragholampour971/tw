@@ -11,7 +11,7 @@ const TabPanel = (props: Props) => {
   return (
     <div
       className={`h-screen ${
-        isActive ? 'block' : 'hidden'
+        isActive ? '' : 'hidden'
       }`}
     >
       {children}
